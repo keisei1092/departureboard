@@ -1,0 +1,655 @@
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <script><!--
+    function TimerCount() {
+      window.location.reload();
+    }
+    --></script>
+   <style>
+   
+   body {
+	  margin: 0;
+   }
+
+   #wrapper {
+      background: #808080;
+      width: 700px;
+      height: 150px;
+      box-shadow: 0 0 25px;
+      position: absolute;
+      top: 25px;
+      left: 25px;
+   }
+
+   #topleft {
+      background: #808080;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 349px;
+      height: 60px;
+      color: #EEE;
+      font-family: "Hiragino Kaku Gothic Pro";
+      border-right: 1px solid #444;
+      background: #606060;
+background: -moz-linear-gradient(top,  #606060 0%, #808080 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#606060), color-stop(100%,#808080));
+background: -webkit-linear-gradient(top,  #606060 0%,#808080 100%);
+background: -o-linear-gradient(top,  #606060 0%,#808080 100%);
+background: -ms-linear-gradient(top,  #606060 0%,#808080 100%);
+background: linear-gradient(to bottom,  #606060 0%,#808080 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#606060', endColorstr='#808080',GradientType=0 );
+
+   }
+
+     #topleft #border {
+      background: #000080;
+      position: absolute;
+      top: 10px;
+      left: 150px;
+      width: 25px;
+      height: 50px;
+     }
+
+     #topleft .route {
+       position: absolute;
+       top: 4px;
+       left: 50px;
+       font-size: 17px;
+     }
+
+     #topleft .direction {
+       font-size: 12px;
+       position: absolute;
+       top: 5px;
+       left: 180px;
+     }
+
+     #topleft .routeinenglish {
+       font-size: 10px;
+       position: absolute;
+       top: 27px;
+       left: 93px;
+     }
+
+     #topleft .directioninenglish {
+       font-size: 8px;
+       position: absolute;
+       top: 20px;
+       left: 180px;
+     }
+
+     #topright {
+      background: #808080;
+      position: absolute;
+      top: 0px;
+      left: 350px;
+      width: 349px;
+      height: 60px;
+      color: #EEE;
+      font-family: "Hiragino Kaku Gothic Pro";
+      border-left: 1px solid #444;
+      background: #606060;
+background: -moz-linear-gradient(top,  #606060 0%, #808080 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#606060), color-stop(100%,#808080));
+background: -webkit-linear-gradient(top,  #606060 0%,#808080 100%);
+background: -o-linear-gradient(top,  #606060 0%,#808080 100%);
+background: -ms-linear-gradient(top,  #606060 0%,#808080 100%);
+background: linear-gradient(to bottom,  #606060 0%,#808080 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#606060', endColorstr='#808080',GradientType=0 );
+
+   }
+
+     #topright #border {
+      background: #000080;
+      position: absolute;
+      top: 10px;
+      left: 150px;
+      width: 25px;
+      height: 50px;
+     }
+
+     #topright .route {
+       position: absolute;
+       top: 4px;
+       left: 50px;
+       font-size: 17px;
+     }
+
+     #topright .direction {
+       font-size: 12px;
+       position: absolute;
+       top: 5px;
+       left: 180px;
+     }
+
+     #topright .routeinenglish {
+       font-size: 10px;
+       position: absolute;
+       top: 27px;
+       left: 93px;
+     }
+
+     #topright .directioninenglish {
+       font-size: 8px;
+       position: absolute;
+       top: 20px;
+       left: 180px;
+     }
+
+   #leftback {
+      background: #111111;
+      position: absolute;
+      top: 60px;
+      left: 0px;
+      width: 350px;
+      height: 90px;
+      border-right: 1px solid #444;
+   }
+
+   #leftnoriba {
+      background: #FFF;
+      color: #000;
+      position: absolute;
+      top: 60px;
+      left: 298px;
+      font-size: 7px;
+   }
+
+   #leftmain {
+      background: #222;
+      position: absolute;
+      top: 70px;
+      left: 30px;
+      width: 290px;
+      height: 70px;
+      font-family: "Hiragino Kaku Gothic Pro";
+      color: #008000;
+      font-size: 22px;
+   }
+
+     #leftmain .type {
+      position: absolute;
+      top: 3px;
+      left: 0px;
+      -webkit-transform: scale(0.65, 1.25);
+      -moz-transform: scale(0.65, 1.25);
+     }
+
+     #leftmain .time {
+      position: absolute;
+      top: 3px;
+      left: 50px;
+      -webkit-transform: scale(0.65, 1.25);
+      -moz-transform: scale(0.65, 1.25);
+     }
+
+     #leftmain .destination {
+      position: absolute;
+      top: 3px;
+      left: 100px;
+      color: #FF4F02;
+      -webkit-transform: scale(0.65, 1.25);
+      -moz-transform: scale(0.65, 1.25);
+     }
+
+     #leftmain .cars {
+      position: absolute;
+      top: 3px;
+      left: 210px;
+      -webkit-transform: scale(0.65, 1.25);
+      -moz-transform: scale(0.65, 1.25);
+     }
+
+     #leftmain .platform {
+      position: absolute;
+      top: 3px;
+      left: 270px;
+      color: #FF4F02;
+      -webkit-transform: scale(0.65, 1.25);
+      -moz-transform: scale(0.65, 1.25);
+     }
+
+     #leftmain .notice {
+      position: absolute;
+      top: 35px;
+      left: 0px;
+      color: #880000;
+      display:table-cell;
+      white-space: nowrap;
+      overflow-x: -webkit-marquee; /*-webkit-marquee にセット*/
+      /*動き方(ahead|auto|backwards|down|forwards|inherit|left|reverse    |right|up)*/
+      -webkit-marquee-direction: left;
+      /*動く範囲(alternate|inherit|none|scroll|slide)*/
+      -webkit-marquee-style: scroll;
+      /*スピード(slow|normal|fast)*/
+      -webkit-marquee-speed: normal;
+      /*動き幅(small|medium|large)*/
+      -webkit-marquee-increment: medium;
+      /*繰り返す回数(数値)*/
+      -webkit-marquee-repetition: 10;
+     }
+
+   #rightback {
+      background: #111;
+      position: absolute;
+      top: 60px;
+      left: 350px;
+      width: 349px;
+      height: 90px;
+      border-left: 1px solid #444;
+   }
+
+   #rightnoriba {
+      background: #FFF;
+      color: #000;
+      position: absolute;
+      top: 60px;
+      left: 648px;
+      font-size: 7px;
+   }
+
+   #rightmain {
+      background: #222;
+      position: absolute;
+      top: 70px;
+      left: 380px;
+      width: 290px;
+      height: 70px;
+      font-family: "Hiragino Kaku Gothic Pro";
+      color: #008000;
+      font-size: 22px;
+   }
+
+     #rightmain .type {
+      position: absolute;
+      top: 3px;
+      left: 0px;
+      -webkit-transform: scale(0.65, 1.25);
+      -moz-transform: scale(0.65, 1.25);
+     }
+
+     #rightmain .time {
+      position: absolute;
+      top: 3px;
+      left: 50px;
+      -webkit-transform: scale(0.65, 1.25);
+      -moz-transform: scale(0.65, 1.25);
+     }
+
+     #rightmain .destination {
+      position: absolute;
+      top: 3px;
+      left: 100px;
+      color: #FF4F02;
+      -webkit-transform: scale(0.65, 1.25);
+      -moz-transform: scale(0.65, 1.25);
+     }
+
+     #rightmain .cars {
+      position: absolute;
+      top: 3px;
+      left: 210px;
+      -webkit-transform: scale(0.65, 1.25);
+      -moz-transform: scale(0.65, 1.25);
+     }
+
+     #rightmain .platform {
+      position: absolute;
+      top: 3px;
+      left: 270px;
+      color: #FF4F02;
+      -webkit-transform: scale(0.65, 1.25);
+      -moz-transform: scale(0.65, 1.25);
+     }
+
+     #rightmain .type2 {
+      position: absolute;
+      top: 33px;
+      left: 0px;
+      -webkit-transform: scale(0.65, 1.25);
+      -moz-transform: scale(0.65, 1.25);
+     }
+
+     #rightmain .time2 {
+      position: absolute;
+      top: 33px;
+      left: 50px;
+      -webkit-transform: scale(0.65, 1.25);
+      -moz-transform: scale(0.65, 1.25);
+     }
+
+     #rightmain .destination2 {
+      position: absolute;
+      top: 33px;
+      left: 100px;
+      color: #FF4F02;
+      -webkit-transform: scale(0.65, 1.25);
+      -moz-transform: scale(0.65, 1.25);
+     }
+
+     #rightmain .cars2 {
+      position: absolute;
+      top: 33px;
+      left: 210px;
+      -webkit-transform: scale(0.65, 1.25);
+      -moz-transform: scale(0.65, 1.25);
+     }
+
+     #rightmain .platform2 {
+      position: absolute;
+      top: 33px;
+      left: 270px;
+      color: #FF4F02;
+      -webkit-transform: scale(0.65, 1.25);
+      -moz-transform: scale(0.65, 1.25);
+     }
+
+     #rightmain .notice {
+      position: absolute;
+      top: 35px;
+      left: 0px;
+      color: #880000;
+     }
+   
+   .helloText {
+	  font: 24px "Lucida Grande";
+	  font-weight: bold;
+	  color: white;
+	  text-align: center;
+	  position: absolute;
+	  top: 41px;
+	  left: 18px;
+	  width: 180px;
+   }
+
+   </style>
+</head>
+<body>
+   <!-- <img src="Default.png">
+   <div class="helloText">Hello, World!</div> -->
+   <div id="wrapper">
+      <div id="topleft">
+         <span id="border">
+         </span>
+         <span class="route">常磐線(下り)</span>
+         <span class="routeinenglish">Joban Line</span>
+         <span class="direction">友部・水戸・いわき方面</span>
+         <span class="directioninenglish">for Tomobe, Mito &amp; Iwaki</span>
+      </div>
+     <div id="leftback">
+     </div>
+     <div id="leftnoriba">
+      のりば
+     </div>
+     <div id="leftmain">
+      <script type="text/javascript">
+      <!--
+      var platform;
+      var type2, hour2, minute2, destination2, cars2, platform2;
+      var type = ["普通", 
+                  "普通", "普通", 
+                  "普通", "普通", "普通", 
+                  "普通", "普通", "普通", 
+                  "普通", "普通",
+                  "普通", "普通", 
+                  "普通", "普通", 
+                  "普通", "普通", 
+                  "普通", "普通", 
+                  "普通", "普通", 
+                  "普通", "普通", "普通", 
+                  "普通", "普通", 
+                  "普通", "普通", 
+                  "普通", "普通", "普通", 
+                  "普通", "普通", "普通", 
+                  "普通", "普通", 
+                  "普通", "普通", 
+                  "普通", "普通", 
+                  "特急", "普通", "普通",
+                  "普通"];
+      var time = [353, // AM.5 = 300
+                  379, 402, // AM.6 = 360
+                  425, 439, 461, // AM.7 = 420
+                  486, 497, 528, // 480
+                  553, 583, // 540
+                  606, 635, // 600
+                  669, 695, // 660
+                  729, 763, // 720
+                  787, 815, // 780
+                  847, 884, // 840
+                  907, 932, 954, // 900
+                  967, 995, // 960
+                  1023, 1048, // 1020
+                  1083, 1111, 1134, // 1080
+                  1147, 1173, 1197, // 1140
+                  1210, 1235, // 1200
+                  1261, 1295, // 1260
+                  1323, 1359, // 1320
+                  1394, 1408, 1423, // 1380
+                  1464]; // 1440
+      var destination = ["高萩", 
+                         "勝田", "いわき",
+                         "高萩", "水戸", "勝田", 
+                         "勝田", "勝田", "勝田", 
+                         "勝田", "勝田",
+                         "勝田", "勝田", 
+                         "水戸", "勝田", 
+                         "勝田", "いわき", 
+                         "勝田", "勝田", 
+                         "勝田", "勝田", 
+                         "水戸", "水戸", "勝田", 
+                         "水戸", "勝田", 
+                         "水戸", "勝田", 
+                         "高萩", "勝田", "勝田", 
+                         "高萩", "水戸", "勝田", 
+                         "勝田", "日立", 
+                         "高萩", "勝田", 
+                         "勝田", "高萩", 
+                         "勝田", "水戸", "勝田",
+                         "勝田"];
+      var cars = [5,
+                  10, 5,
+                  10, 10, 10,
+                  10, 10, 10,
+                  10, 10,
+                  10, 10,
+                  10, 10,
+                  10, 5,
+                  10, 10,
+                  10, 5,
+                  10, 10, 10,
+                  10, 10,
+                  10, 10,
+                  10, 10, 10,
+                  10, 10, 10,
+                  10, 10,
+                  10, 10,
+                  10, 10,
+                  10, 10, 10,
+                  10];
+      var i = 0;
+      var nowtime = new Date();
+      var nowhour = nowtime.getHours();
+      var nowminute = nowtime.getMinutes();
+      while (nowhour * 60 + nowminute >= time[i]) {
+         i++;
+      }
+      var nexthour = Math.floor(time[i] / 60);
+      var nextminute = time[i] % 60;
+      if (nextminute < 10) {
+         setminute = "0" + String(nextminute);
+      } else {
+         setminute = nextminute;
+      }
+      var nexttype = type[i];
+      var nextdestination = destination[i];
+      var nextcars = cars[i];
+      platform = 1;
+      notice = "　　　　ホーム上には傾斜があるところがございますので、足元には十分ご注意ください。車いすやベビーカーをご利用のお客様は、ご注意ください。";
+      document.write("<span class=type>" + nexttype + "</span>");
+      document.write("<span class=time>" + nexthour + ":" + setminute + "</span>");
+      document.write("<span class=destination>" + nextdestination + "</span>");
+      document.write("<span class=cars>" + nextcars + "両</span>");
+      document.write("<span class=platform>" + platform + "</span>");
+      document.write("<span class=notice>" + notice + "</span>");
+      // -->
+      </script>
+      <noscript>
+         JavaScriptを有効にしてください。
+      </noscript>
+     </div>
+     <div id="topright">
+      <span id="border">
+         </span>
+         <span class="route">常磐線(上り)</span>
+         <span class="routeinenglish">Joban Line</span>
+         <span class="direction">土浦・我孫子・上野方面</span>
+         <span class="directioninenglish">for Tsuchiura, Abiko &amp; Ueno</span>
+     </div>
+     <div id="rightback">
+     </div>
+     <div id="rightnoriba">
+      のりば
+     </div>
+     <div id="rightmain">
+      <script type="text/javascript">
+      <!--
+      var platform;
+      var type2, hour2, minute2, destination2, platform2;
+      var type = ["普通", "普通", 
+                  "普通", "特急", "普通", "普通", "普通", 
+                  "普通", "普通", "普通", "普通", 
+                  "普通", "普通", "普通", 
+                  "普通", "普通",
+                  "普通", "普通", 
+                  "普通", "普通", 
+                  "普通", "普通", 
+                  "普通", "普通", 
+                  "普通", "普通", 
+                  "普通", "普通",
+                  "普通", "普通", 
+                  "普通", "普通", 
+                  "普通", "普通", 
+                  "普通", "普通", "普通", 
+                  "普通", 
+                  "普通", "普通", 
+                  "普通", "普通", "普通", 
+                  "普通",
+                  "普通"];
+      var time = [316, 355, // 300
+                  366, 375, 381, 397, 410, // 360
+                  427, 435, 447, 463, // 420
+                  486, 506, 537, // 480
+                  558, 592, // 540
+                  611, 639, // 600
+                  670, 700, // 660
+                  730, 759, // 720
+                  790, 819, // 780
+                  850, 878, // 840
+                  910, 941, // 900
+                  970, 1003, // 960
+                  1030, 1065, // 1020
+                  1093, 1120, // 1080
+                  1146, 1165, 1198, // 1140
+                  1225, // 1200
+                  1261, 1296, // 1260
+                  1328, 1352, 1375, // 1320
+                  1387, // 1380
+                  1453]; // 1440
+      var destination = ["上野", "上野", 
+                         "上野", "上野", "上野", "上野", "上野", 
+                         "上野", "上野", "上野", "上野", 
+                         "上野", "上野", "上野", 
+                         "土浦", "土浦",
+                         "上野", "上野", 
+                         "上野", "上野", 
+                         "上野", "上野", 
+                         "上野", "上野", 
+                         "土浦", "土浦", 
+                         "上野", "上野",
+                         "上野", "上野", 
+                         "上野", "上野", 
+                         "上野", "上野", 
+                         "上野", "上野", "上野", 
+                         "上野", 
+                         "上野", "上野", 
+                         "上野", "上野", "土浦", 
+                         "我孫子",
+                         "土浦"];
+      var cars = [10, 10, 
+                  10, 10, 10, 10, 10, 
+                  10, 10, 10, 10, 
+                  10, 10, 10, 
+                  5, 5,
+                  10, 10, 
+                  10, 10, 
+                  10, 10, 
+                  10, 10, 
+                  5, 10, // 14時 
+                  10, 10,
+                  10, 10, 
+                  10, 10, 
+                  10, 10, 
+                  10, 10, 5, 
+                  10, 
+                  10, 10, 
+                  10, 10, 5, 
+                  10,
+                  5];
+      var i = 0;
+      var nowtime = new Date();
+      var nowhour = nowtime.getHours();
+      var nowminute = nowtime.getMinutes();
+      while (nowhour * 60 + nowminute >= time[i]) {
+         i++;
+      }
+      var nexthour = Math.floor(time[i] / 60);
+      var nextminute = time[i] % 60;
+      var nexttype = "普通";
+      if (nextminute < 10) {
+         setminute = "0" + String(nextminute);
+      } else {
+         setminute = nextminute;
+      }
+      var nexttype = type[i];
+      var nextdestination = destination[i];
+      var nextcars = cars[i];
+      platform = 3;
+      i++;
+      var nexthour2 = Math.floor(time[i] / 60);
+      var nextminute2 = time[i] % 60;
+      if (nextminute2 < 10) {
+         setminute2 = "0" + String(nextminute2);
+      } else {
+         setminute2 = nextminute2;
+      }
+      var nexttype2 = type[i];
+      var nextdestination2 = destination[i];
+      var nextcars2 = cars[i];
+      platform2 = 3;
+      document.write("<span class=type>" + nexttype + "</span>");
+      document.write("<span class=time>" + nexthour + ":" + setminute + "</span>");
+      document.write("<span class=destination>" + nextdestination + "</span>");
+      document.write("<span class=cars>" + nextcars + "両</span>");
+      document.write("<span class=platform>" + platform + "</span>");
+
+      document.write("<span class=type2>" + nexttype2 + "</span>");
+      document.write("<span class=time2>" + nexthour2 + ":" + setminute2 + "</span>");
+      document.write("<span class=destination2>" + nextdestination2 + "</span>");
+      document.write("<span class=cars2>" + nextcars2 + "両</span>");
+      document.write("<span class=platform2>" + platform2 + "</span>");
+      // -->
+      </script>
+      <noscript>
+         JavaScriptを有効にしてください。
+      </noscript>
+     </div>
+   </div>
+   <script>
+   <!--
+      window.setTimeout("TimerCount()", 60000);
+    // -->
+    </script>
+</body>
+</html>
